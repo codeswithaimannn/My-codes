@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+      font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+}
+
+.main {
+      background-image: url(https://1111arts.org/wp-content/uploads/2017/10/programming-code-abstract-technology-background-software-1024x756.jpg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: #ffffff;
+    overflow-y: scroll;
+    font-size: 24px
+}
+
+.main::after {
+  content: "";
+    background-color: #87CEEB;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.main > h1,
+.main > p {
+  text-align: center;
+  font-family: 35px;
+  z-index: 2;
+  position: relative
+}
+
+.main-content {
+  background-color: e;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: 0 auto;
+  margin-bottom: 40px;
+    border-radius: 5px;
+    z-index: 2;
+    position: relative;
+      box-shadow: 0px -1px 10px 5px blue;
+}
+
+#name, #email, #number, #dropdown, #comment {
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 5px 10px;
+    color: #87CEEB;
+    background-color:white;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+label[for=name], 
+label[for=email],
+label[for=number],
+label[for=dropdown],
+label[for=comment] {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#java, 
+#PHP,
+#Python,
+fieldset input {
+  height: 20px;
+  width: 20px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+#comment {
+  min-height: 180px;
+}
+
+label[for=comment]{
+  margin-top: 30px
+}
+
+#submit {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: #37af65;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 0;
+  color:black;
+  font-size: 20px;
+}
+    </style>
+<div class="main"></div>
+    <h1 id="title"> survey form</h1>
+    <p id="description">
+      Thnak you for taking the time to help me to add more videos
+    </p>
+    
+     <div class="main-content">
+    <div class="form-content">
+      <form id="survey-form">
+        <label for="name" id="name-label">Name</label>
+        <input id="name" type="text" required placeholder="Enter your name" />
+        <label for="email" id="email-label">Email</label>
+         <input id="email" type="email" required placeholder="Enter your email" />
+        <label for="number" id="number-label">Enter your rate from 1 to 10</label>
+         <input id="number" type="number" min="1" max="10" required placeholder="Enter your rate" />
+        
+        <label for="dropdown">Which option best describes your current role?</label>
+        <select id="dropdown">
+          <option value="studen">Student</option>
+          <option value="full-time-learner">Full time learner</option>
+          <option value="full-time-job">Full time job</option>
+          <option value="prefer-not-to-say">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+        
+        <fieldset>
+          <legend>Would you recommend me to be a friend?</legend>
+          <input type="radio" name="action" checked id="definitely" value="definitely" /><label for="definitely">Definitely</label><br />
+          <input type="radio" name="action" id="maybe" value="maybe"  /><label for="maybe">Maybe</label><br />
+          <input type="radio" name="action" id="not-sure" value="not-sure" /><label for="not-sure">Not sure</label><br />
+        </fieldset>
+  
+          <p>What is your favourite language</p>
+          <input type="checkbox" id="java" name="java" value="java">
+          <label for="java">java</label><br>
+          <input type="checkbox" id="PHP" name="PHP" value="PHP">
+          <label for="PHP">PHP</label><br>
+          <input type="checkbox" id="Python" name="Python" value="Python">
+          <label for="Python">Python</label><br>
+        
+        
+        <label for="comment">Any comments or suggestions?</label>
+        <textarea rows="4" cols="50" id="comment">Enter your comment here...</textarea>
+        
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+    </div>
+  </div>
+  </html>
